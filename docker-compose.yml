@@ -9,17 +9,17 @@ services:
   # Keycloak
   keycloak:
     container_name: keycloak
-    image: jboss/keycloak:latest
+    image: alemairebe/keycloak:14.0.0
     ports:
       - 8090:8080
     environment:
       - KEYCLOAK_USER=admin
       - KEYCLOAK_PASSWORD=a12345678
-      - KEYCLOAK_FRONTEND_URL=https://localhost:8090/auth
+      - KEYCLOAK_FRONTEND_URL=http://localhost:8090/auth
     volumes:
       - devops-dojo-keycloak-data:/opt/jboss/keycloak/standalone/data
       - ./backend/people/devops-dojo-realm.json:/tmp/realm.json
     command:
-      - -Dkeycloak.migration.action=import -Dkeycloak.migration.provider=singleFile -Dkeycloak.migration.file=/tmp/realm.json -Dkeycloak.migration.strategy=OVERWRITE_EXISTING
+      - -Dkeycloak.migration.action=import -Dkeycloak.migration.provider=singleFile -Dkeycloak.migration.file=/tmp/realm.json -Dkeycloak.migration.strategy=OVERWRITE_EXISTING -Dkeycloak.profile.feature.declarative_user_profile=enabled
     networks:
       - devops-dojo
