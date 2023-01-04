@@ -1,3 +1,24 @@
 [submodule "backend-people"]
 	path = backend/people
 	url = https://github.com/pucrs-poli/devops-dojo-people.git
+[submodule "backend-resources"]
+	path = backend/resources
+	url = https://github.com/pucrs-poli/devops-dojo-resources
+[submodule "backend-courses"]
+	path = backend/courses
+	url = https://github.com/pucrs-poli/devops-dojo-courses
+[submodule "backend-classes"]
+	path = backend/classes
+	url = https://github.com/pucrs-poli/devops-dojo-classes
+[submodule "backend-lessons"]
+	path = backend/lessons
+	url = https://github.com/pucrs-poli/devops-dojo-lessons
+[submodule "backend-reservations"]
+	path = backend/reservations
+	url = https://github.com/pucrs-poli/devops-dojo-reservations
+[submodule "backend-buildings"]
+	path = backend/buildings
+	url = https://github.com/pucrs-poli/devops-dojo-buildings
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/pucrs-poli/devops-dojo-frontend
