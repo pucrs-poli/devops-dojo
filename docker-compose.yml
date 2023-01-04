@@ -20,6 +20,6 @@ services:
       - devops-dojo-keycloak-data:/opt/jboss/keycloak/standalone/data
       - ./backend/people/devops-dojo-realm.json:/tmp/realm.json
     command:
-      - -Dkeycloak.migration.action=import -Dkeycloak.migration.provider=singleFile -Dkeycloak.migration.file=/tmp/realm.json -Dkeycloak.migration.strategy=OVERWRITE_EXISTING
+      - -Dkeycloak.migration.action=import -Dkeycloak.migration.provider=singleFile -Dkeycloak.migration.file=/tmp/realm.json -Dkeycloak.migration.strategy=OVERWRITE_EXISTING -Dkeycloak.profile.feature.declarative_user_profile=enabled
     networks:
       - devops-dojo
